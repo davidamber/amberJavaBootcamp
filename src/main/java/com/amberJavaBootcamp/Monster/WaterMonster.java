@@ -1,2 +1,4 @@
-package com.amberJavaBootcamp.Monster;public class WaterMonster {
+package com.amberJavaBootcamp.Monster;
+
+public class WaterMonster {
 }
