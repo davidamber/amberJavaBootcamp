@@ -1,7 +1,7 @@
 package com.amberJavaBootcamp.CafeProject;
 
 
-public class Product {
+public abstract class Product {
     private String name;
     private double price;
     private String description;
@@ -48,11 +48,9 @@ public class Product {
         this.quantity = newQuantity;
     }
 
-    public double calculateProductTotal() {
+    public abstract double calculateProductTotal();
         // calculate product subtotal for the order (price * quantity)
-        return this.price * this.quantity;
-        }
-
+        // return this.price * this.quantity;
 
         }
 

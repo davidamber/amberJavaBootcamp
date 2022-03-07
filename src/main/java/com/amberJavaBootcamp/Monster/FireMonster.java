@@ -1,8 +1,15 @@
-package com.amberJavaBootcamp.Monster;
+//package com.amberJavaBootcamp.Monster;
+//
+//public class FireMonster extends Monster {
+////    public FireMonster() {
+////
+////    }
+//    @Override
+//    public String attack() {
+//        String output = "Attack with fire!";
+//        return output;
+//    }
+//}
+//
+//
 
-public class FireMonster extends Monster {
-    public static void main(String[] args) {
-        FireMonster fireAttack = new FireMonster();
-        System.out.println("Attack with fire!");
-    }
-}
