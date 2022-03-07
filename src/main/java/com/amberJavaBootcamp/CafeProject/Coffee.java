@@ -11,7 +11,7 @@ public class Coffee extends Product {
 
     public Coffee() {
         super();
-        this.milk = true;
+        this.milk = false;
         this.sugar = false;
     }
 
@@ -35,5 +35,9 @@ public class Coffee extends Product {
         this.sugar = sugar;
     }
 
+    @Override
+    public double calculateProductSubtotal() {
+        return  productPrice * productQuantity;
+    }
 
 }
