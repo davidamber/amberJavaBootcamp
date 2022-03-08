@@ -18,8 +18,8 @@ public class Coffee extends Product {
     public Coffee(boolean sugar, boolean milk, String name,
                   double price, String description) {
         super(name, price, description);
-        this.milk = milk;
-        this.sugar = sugar;
+        setMilk(milk);
+        setSugar(sugar);
     }
 
     public boolean getMilk() {
@@ -29,15 +29,10 @@ public class Coffee extends Product {
         return sugar;
     }
     public void setMilk (boolean newMilk) {
-        this.milk = milk;
+        this.milk = newMilk;
     }
     public void setSugar (boolean newSugar) {
-        this.sugar = sugar;
-    }
-
-    @Override
-    public double calculateProductSubtotal() {
-        return  productPrice * productQuantity;
+        this.sugar = newSugar;
     }
 
 }

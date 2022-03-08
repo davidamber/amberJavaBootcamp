@@ -1,18 +1,10 @@
 package com.amberJavaBootcamp.CafeProject;
 
 public class Espresso extends Product {
-    @Override
-    public double calculateProductTotal() {
-        return this.getPrice() * this.getQuantity() {
-            if (extraShot = true) {
-                System.out.println(calculateProductTotal() + 2);
-            } else {
-                System.out.println(calculateProductTotal());
-            }
-        }
-    }
-    boolean extraShot;
-    boolean macchiato;
+    public boolean extraShot;
+    private boolean macchiato;
+
+
 
     public Espresso() {
         super();
@@ -21,22 +13,39 @@ public class Espresso extends Product {
     }
 
     public Espresso(boolean extraShot, boolean macchiato, String name,
-                  double price, String description) {
+                    double price, String description) {
         super(name, price, description);
-        this.extraShot = extraShot;
-        this.macchiato = macchiato;
+        setExtraShot(extraShot);
+        setMacchiato(macchiato);
     }
 
-    public boolean getExtraShot() {
+    public boolean setExtraShot(boolean newShot){
+     return this.extraShot = newShot;
+    }
+
+    public boolean setMacchiato(boolean newMacc){
+        return this.extraShot = newMacc;
+    }
+
+    public boolean getExtraShot(String choice) {
+        if (choice.equalsIgnoreCase("n")){
+            extraShot = false;
+        }else {
+            extraShot = true;
+        }
         return extraShot;
     }
     public boolean getMacchiato() {
         return macchiato;
     }
-    public void setExtraShot (boolean newExtraShot) {
-        this.extraShot = extraShot;
-    }
-    public void setSugar (boolean newMacchiato) {
-        this.macchiato = macchiato;
+    @Override
+    public double calculateProductTotal() {
+
+        if (extraShot = true) {
+            System.out.println(calculateProductTotal() + 2);
+        } else {
+            System.out.println(calculateProductTotal());
+        }
+        return this.getPrice() * this.getQuantity();
     }
 }

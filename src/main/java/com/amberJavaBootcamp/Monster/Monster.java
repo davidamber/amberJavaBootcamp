@@ -1,8 +1,7 @@
 package com.amberJavaBootcamp.Monster;
 
 public class Monster {
-    private String name;
-
+    private static String name;
 
     public Monster(String name) {
         this.name = name;
